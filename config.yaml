@@ -1,0 +1,11 @@
+deployment:
+  role: data_plane
+  role_data_plane:
+    config_provider: yaml
+apisix:
+  admin_key:
+    - name: "admin"
+      key: edd1c9f034335f136f87ad84b625c8f1 # WARNING: this is just an example key, please use your own key.
+      role: admin
+ext-plugin:
+  cmd: [ "python3", "/usr/local/apisix/apisix-python-plugin-runner/bin/py-runner", "start" ]
